@@ -20,11 +20,16 @@
  - [❌]	Добавить поле Item.currency, создать 2 Stripe Keypair на две разные валюты и в зависимости от валюты выбранного товара предлагать оплату в соответствующей валюте
  - [✔]	Реализовать не Stripe Session, а Stripe Payment Intent.
 ## Как проверить:
-#Склонировать репозиторий:
-```git clone https://github.com/kirill3466/testovoe-zadanie-rishat.git```
-#Собрать контейнер:
-```docker-compose up --build```
+Склонировать репозиторий:
+```
+git clone https://github.com/kirill3466/testovoe-zadanie-rishat.git
+```
+Собрать контейнер:
+```
+docker-compose up --build
+```
 Выполняем запросы, в бд уже есть данные по 1, 2 id:
+
 # GET item / order:
 ```
 curl -X GET http://localhost:8000/item/1

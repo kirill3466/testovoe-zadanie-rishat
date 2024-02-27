@@ -28,21 +28,21 @@ git clone https://github.com/kirill3466/testovoe-zadanie-rishat.git
 ```
 docker-compose up --build
 ```
-Выполняем запросы, в бд уже есть данные по 1, 2 id:
+## Выполняем запросы, в бд уже есть данные по 1, 2 id:
 
-# GET item / order:
+### GET item / order:
 ```
 curl -X GET http://localhost:8000/item/1
 curl -X GET http://localhost:8000/order/1
 ```
 Тут выдает простые документы
-# GET buy item / order:
+### GET buy item / order:
 ```
 curl -X GET http://localhost:8000/buy/1
 curl -X GET http://localhost:8000/buy_order/1
 ```
 Должно выдавать айдишники сессий
-# GET payment intent:
+### GET payment intent:
 ```
 -X GET http://localhost:8000/payment_intent/1
 ```

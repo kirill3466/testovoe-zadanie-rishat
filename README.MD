@@ -28,8 +28,10 @@ git clone https://github.com/kirill3466/testovoe-zadanie-rishat.git
 ```
 docker-compose up --build
 ```
-Либо сразу запустить сервер:
+Либо сразу запустить сервер после установки зависимостей:
 ```
+venv\Scripts\Activate
+pip install -r requirements.txt
 python manage.py runserver
 ```
 ## Вход в админку дефолтный: admin admin

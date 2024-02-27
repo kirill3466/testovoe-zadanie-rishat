@@ -53,3 +53,6 @@ curl -X GET http://localhost:8000/buy_order/1
 
 # Важно:
 При создании новых объектов order, items должны иметь одинаковую валюту
+
+# Мои результаты скриншотами:
+https://imgur.com/a/xIdyS4O

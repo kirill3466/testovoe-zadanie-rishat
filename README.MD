@@ -28,7 +28,7 @@ git clone https://github.com/kirill3466/testovoe-zadanie-rishat.git
 ```
 docker-compose up --build
 ```
-## --- Вход в админку дефолтный: admin admin ---
+## Вход в админку дефолтный: admin admin
 ## Выполняем запросы, в бд уже есть данные по 1, 2 id:
 
 ### GET item / order:

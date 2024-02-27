@@ -40,6 +40,8 @@ curl -X GET http://localhost:8000/order/1
 ### GET buy item / order:
 ```
 curl -X GET http://localhost:8000/buy/1
+
+
 curl -X GET http://localhost:8000/buy_order/1
 ```
 Должно выдавать айдишники сессий
@@ -48,3 +50,5 @@ curl -X GET http://localhost:8000/buy_order/1
 -X GET http://localhost:8000/payment_intent/1
 ```
 Тут выдает айди "Намерения о покупке" (В лк страйпа появляется незавершенный платеж)
+
+При создании новых объектов order, items должны иметь одинаковую валюту

@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<div class="content">
+    <div class="flex flex-col justify-center items-center bg-yellow-100 p-12 gap-3">
+        <h1 class="text-xl text-center">{{ order  }}</h1>
+        <p class="text-xl text-center">
+            Items: {% for item in order.items.all  %} <br>{{ item }} Total: {{ item.get_total_price }} Currency: {{ item.currency }} </br> {% endfor %}
+        </p>
+        <p class="text-xl text-center">Tax: {{ order.taxes }} - {{ order.taxes.percentage }} %</p>
+        <p class="text-xl text-center">{{ order.discounts }}</p>
+        <p class="text-xl text-center">Total: {{ order.get_total }}</p>
+        <button id="buy-button" class="text-xl text-center bg-blue-500 rounded-lg text-white px-12 py-2">Buy(session)</button>
+</div>
+
+<script type="text/javascript">
+    const stripe = Stripe('{{ stripe_key }}');
+    const buyButton = document.getElementById('buy-button');
+    buyButton.addEventListener('click', function () {
+        fetch('/buy_order/{{ order.id }}', {method: 'GET'})
+            .then(response => response.json())
+            .then(({session_id}) => stripe.redirectToCheckout({sessionId: session_id}))
+    });
+</script>
+
+{% endblock %}
